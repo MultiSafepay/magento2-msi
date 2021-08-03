@@ -36,6 +36,9 @@ use Magento\Store\Api\WebsiteRepositoryInterface;
 use Magento\Store\Model\StoreManagerInterface;
 use MultiSafepay\ConnectCore\Api\StockReducerInterface;
 
+/**
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ */
 class StockReducer implements StockReducerInterface
 {
 
@@ -120,8 +123,7 @@ class StockReducer implements StockReducerInterface
     public function reduce(OrderInterface $order): void
     {
         if ($this->scopeConfig->getValue('cataloginventory/options/can_subtract')) {
-            $products = $order->getAllItems();
-            foreach ($products as $itemId => $product) {
+            foreach ($order->getAllItems() as $product) {
                 $this->placeReservation($product);
             }
         }
