@@ -27,5 +27,4 @@ composer config repositories.multisafepay "path" "package-source/multisafepay/*"
 
 composer config minimum-stability dev
 composer config prefer-stable false
-composer require yireo/magento2-replace-bundled --no-update
 composer update
