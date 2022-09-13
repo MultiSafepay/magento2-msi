@@ -5,7 +5,7 @@ jobs:
   integration-tests:
     strategy:
       matrix:
-        magento_version: [2.3.7-p3, 2.4.5]
+        magento_version: [2.3.7-p3, 2.4.2]
     name: Magento 2 Integration Tests
     runs-on: ubuntu-latest
     services:
@@ -41,7 +41,7 @@ jobs:
             composer_name: multisafepay/magento2-msi
             ce_version: '${{ matrix.magento_version }}'
             magento_pre_install_script: .github/workflows/magento-integration-tests-pre-phpunit.sh
-      - if: matrix.magento_version == '2.4.5'
+      - if: matrix.magento_version == '2.4.2'
         name: M2 Integration Tests on ${{ matrix.magento_version }}
         uses: MultiSafepay/github-actions-m2/magento-integration-tests/7.4@with-coverage-support
         env:
