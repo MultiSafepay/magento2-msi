@@ -1,9 +1,9 @@
 {
     "name": "multisafepay/magento2-msi",
     "description": "MultiSafepay module for Magento 2 (msi-only)",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "require": {
-        "multisafepay/magento2-core": "^1.0|^2.0",
+        "multisafepay/magento2-core": "^1.0|^2.0|^3.0",
         "magento/framework": "^102.0|^103.0",
         "magento/module-inventory-sales-api": "^1.0",
         "magento/module-catalog": "^101.0|^102.0|^103.0|^104.0",
